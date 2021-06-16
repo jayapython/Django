@@ -1,0 +1,20 @@
+<html>
+	{% extends 'crudapp/base.html' %}
+	{% block content %}
+		<h1> Update Student Details </h1>
+		<form method = 'POST'>
+		student Roll.No <input type='text' name='sno' value={{Student.sno}}>
+		<br> </br>
+		student Name <input type='text' name='sname' value={{Student.sname}}>
+		<br> </br>
+		student Class <input type='text' name='sclass' value={{Student.sclass}}>
+		<br> </br>
+		student Address <input type='text' name='saddress' value={{Student.saddress}}>
+			{{form.as_p}}
+			{% csrf_token %}
+		<br> </br>
+		<input type='submit' value='Update Student'>
+		</form>
+	{% endblock %}
+			
+</html>
